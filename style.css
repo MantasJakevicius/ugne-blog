@@ -1,0 +1,498 @@
+@font-face {
+    font-family: sweetPea;
+    src: url(font/Sweet_Pea.ttf);
+}
+
+* {
+    text-align: center;
+    margin: 0;
+	padding: 0;
+}
+
+#home {
+    opacity: .5;
+    outline: none;
+    text-decoration: none;
+	position: fixed; 
+    top: 3%;
+    left: 3%;
+    z-index: 100;
+}
+
+#home:hover {
+	opacity: 1;
+}
+
+#home img {
+	height: 4em;
+	width: 5em;
+}
+
+::-moz-selection { 
+    background-color: #F2BFAE;
+    opacity: 0.5;
+}
+
+::selection {
+    
+    background-color: #F2BFAE;
+    opacity: .5;
+}
+
+.active:hover {
+    border-bottom: none;
+}
+
+.active {
+    
+    text-decoration: underline;
+}
+#background-video {
+	
+	position: absolute; 
+	opacity: 0.3; 
+	width: 100%; 
+}
+
+ul, footer, #newest, #popular, #intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    max-width: 100%;
+    height:100%;
+    float: right;
+	background: none;
+}
+
+#logo p {
+    
+    font-family: sweetPea;
+    height: 100%;
+    font-size: 25vw;
+    color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url(images/gold.jpg) repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+	overflow: hidden;
+} 
+
+#intro {
+	margin: 0px auto 20px auto;
+	background-color: lightskyblue;
+	-webkit-box-shadow: 0 0 4px 2px skyblue;
+   	-moz-box-shadow: 0 0 4px 2px skyblue;
+    box-shadow: 0 0 20px 3px skyblue;
+    height: 100%;
+}
+
+#posts-container {
+		margin: 10px 10px 0 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+@media (max-width: 1000px) {
+    
+#intro video {
+    display: none;
+}
+
+#intro {
+    background: url('images/background.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: .4;
+    -moz-box-shadow: inset -5px -5px 15px #B2C7E5;
+    -webkit-box-shadow: inset -5px -5px 15px #B2C7E5;
+    box-shadow: inset -5px -5px 15px #B2C7E5;
+    height: 100%;
+}
+
+/* Add a black background color to the top navigation */
+nav {
+    font-family: sweetPea;
+	background-color:  #F2BFAE;
+	font-size: 4em;
+    overflow: hidden;
+    opacity: .8;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: block;
+}
+
+/* Style the links inside the navigation bar */
+nav ul a {
+    color: black;
+	display: block;
+    text-align: left;
+    padding: 11px 13px;
+    text-decoration: none;
+    font-size: 20px;
+}
+	nav ul li:first-child {
+		float: left;
+	}
+	
+
+.border, nav ul li:not(:first-child) {
+    display: none;
+}
+
+nav a.icon {
+   float: right;
+    display: block;
+ }
+ 
+ nav.responsive ul {
+     position: relative;
+ }
+ nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+	
+nav.responsive ul li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+	#content {
+		margin-top: 53px;
+	}
+
+}
+
+#intro, #newest, #popular, footer, #social {
+    width: 100%;
+}
+
+#social {
+    margin: 20px auto;
+}
+
+.post {
+    float: left;
+    width: 90%;
+    margin: 20px;
+	position: relative;
+}
+
+.post img {
+	width: 100%;
+	box-shadow: 0 0 20px 3px #F2BFAE;
+	border-radius: 5px;	
+}
+
+footer, h1 {
+    overflow: hidden;
+}
+
+footer {
+    height: 50px;
+	font-family: sweetPea;
+	font-size: 1.5em;
+	background-color:  #F2BFAE;
+}
+
+h1 {
+    float: left;
+    width: 100%;
+	font-family: sweetPea;
+}
+
+.social-icon {
+    padding: 10px;
+    font-size: 40px !important;
+    width: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: #F2BFAE;
+    border: 1px solid #F5C910;
+    border-radius: 50%;
+    margin: 0 10px 20px 10px;
+	text-align: center;	  
+	text-shadow: 0 0 1px #F5C910 , 0 0 1px #F5C910 , 0 0 30px #F5C910 , 0 0 1px #F5C910 , 0 0 1px #F5C910 , 0 0 80px #F5C910 , 0 0 2px #F5C910 ;
+	box-shadow: 0 0 15px 1px #F5C910;
+}
+
+@media (max-width: 320px) {
+	#logo p {
+    font-size: 18vw;
+		}
+	
+	.social-icon { 
+    font-size: 35px !important;
+    width: 35px;
+		}
+}
+
+.post-picture {
+	position: relative;
+	box-shadow: 0 0 15px 5px #F2BFAE;
+	border-radius: 5px;
+	margin: 20px auto;
+}
+
+.post-picture img {
+	max-width: 100%;
+	margin-bottom: -4px;
+	border-radius: 5px;
+}
+
+.post-picture figcaption {
+	height: 20%;
+	top: 80%;
+	font-size: 100%;
+	display: none !important;
+}
+
+#post {
+	position: relative;
+	box-shadow: 0 0 15px 5px #F2BFAE;
+	border-radius: 5px;
+	margin: 10px auto 30px auto;
+}
+
+#post img {
+	max-width: 100%;
+	margin-bottom: -4px;
+	border-radius: 5px;
+}
+
+#posts, #aside-posts {
+	width: 94%;
+}
+
+.aside-posts img {
+	max-width: 100%;
+	border-radius: 5px;
+	margin-bottom: -4px;
+}
+
+.aside-posts {
+	margin-bottom: 30px;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0 0 15px 5px #F2BFAE;
+}
+
+.aside-posts:last-child {
+	margin-bottom: 20px;
+}
+
+#post-page {
+	width: 85%;
+	margin: 0 auto;
+}
+
+	#post-page p {
+		font-family: "Average", serif;
+		color: #464646;
+		font-size: 1.18em;
+    	line-height: 24px;
+	}
+
+figcaption {
+	width: 100%;
+	margin: 0 auto;
+	position: absolute;
+	background: white;
+	opacity: 0.7;
+	color: #5c5260;
+	font-family: 'latolight',helvetica,arial,verdana,sans-serif;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	top: 85%;
+	height: 15%;
+	font-size: 130%;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 768px) {
+	
+	#portrait {
+		display: none;
+	}
+	
+	figcaption {
+		height: 30%;
+		top: 70%;
+		font-size: 130%;
+		text-transform: uppercase;
+	}
+	
+	.post figcaption {
+		height: 30%;
+		top: 70%;
+		font-size: 100% !important;
+		
+	}
+}
+
+@media (min-width: 1024px) {
+
+	#posts {
+		width: 200%;
+		float: left;
+		margin: 0 10px;
+	}
+	
+	#post:hover, .aside-posts:hover, .post img:hover {
+		box-shadow: 0 0 30px 10px #B76E79;
+		opacity: 0.7;
+	}
+	
+	#aside-posts {
+		width: 95.4%;
+		float: right;
+		margin: 0 10px;
+	}
+
+	#posts-container {
+		margin: 10px 10px 0 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: nowrap;
+	}
+	
+	#post-page {
+		margin: 20px auto;
+	}
+	
+	#post-page figure{
+		width: 80%;
+		margin: 20px auto;
+	}
+	
+
+	#icons {
+		float: right;
+	}
+
+	#icons:last-child {
+		margin-right: 50px;
+	}
+
+	.social-icon {
+		font-size: 20px !important;
+		width: 20px;
+		color: white;
+		text-shadow: none;
+		box-shadow: 0 0 20px 3px #F5C910;
+	}
+	
+	.social-icon:hover {
+		opacity: 0.7;
+	}
+	
+	#portrait {
+		float: left;
+		max-width: 25%;
+		max-height: 550px;
+		
+	}
+
+	#portrait img {
+		max-width: 100%;
+		}
+	
+	#intro {
+		margin-top: 20px;
+	}
+	
+	#logo {
+		max-width: 60%;
+		margin-left: 50px;
+	}
+	
+	#logo p {
+		font-size: 16vw;
+	}
+	
+	#border {
+		width: 90%;
+		height: 40px;
+		margin: -7px auto 0 auto;
+		background-image: url(images/border.png);
+		background-size: contain;
+		background-repeat: repeat-x;
+	}
+	
+	.small-caption {
+		font-size: 100%;
+		top: 80.2%;
+		height: 20%;
+	}
+	
+	.post figcaption {
+		visibility: hidden;
+	}
+	
+	.post:hover figcaption {
+		top: 0;
+		height: 100%;
+		visibility: visible;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.post-picture figcaption {
+		height: 10%;
+		top: 90%;
+		font-size: 2.75em;
+	}
+	
+		li {
+		display: inline;
+		padding: 14px;
+	}
+
+	li a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #000;
+		font-family: sweetPea;
+		font-size: 25px;
+	}
+
+	li a:hover {
+		border-bottom: 1px solid #000;
+		font-size: 35px;
+		line-height: 40px;
+	}
+
+	nav {
+		width: 100%;
+		margin: 0 auto;
+		line-height: 50px;
+	}
+
+	.border {
+		max-height: 40px;
+	}
+	
+	nav .icon {
+        display: none;
+    }
+	
+}
